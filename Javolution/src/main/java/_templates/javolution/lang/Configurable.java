@@ -364,26 +364,31 @@ public class Configurable/*<T>*/ {
      *
      * @param properties the properties.
      */
-    public static void read(java.util.Properties properties) {
-        Enumeration e = properties.keys();
-        while (e.hasMoreElements()) {
-            String name = (String) e.nextElement();
-            String textValue = properties.getProperty(name);
-            Configurable cfg = Configurable.getInstance(name);
-            if (cfg == null)
-                continue;
-            // Use the default value to retrieve the configurable type
-            // and the associated textual format.
-            Class type = cfg.getDefault().getClass();
-            TextFormat format = TextFormat.getInstance(type);
-            if (!format.isParsingSupported()) {
-                LogContext.error("Cannot find suitable TextFormat to parse instances of " + type);
-                continue;
-            }
-            Object newValue = format.parse(Configurable.toCsq(textValue));
-            Configurable.configure(cfg, newValue);
-        }
-    }
+
+    // BAD NEWS!
+    //   The following code won't work on J2ME (because it doesn't have java.util.Properties).
+    //   Removed for this reason.
+    
+    // public static void read(java.util.Properties properties) {
+    //     Enumeration e = properties.keys();
+    //     while (e.hasMoreElements()) {
+    //         String name = (String) e.nextElement();
+    //         String textValue = properties.getProperty(name);
+    //         Configurable cfg = Configurable.getInstance(name);
+    //         if (cfg == null)
+    //             continue;
+    //         // Use the default value to retrieve the configurable type
+    //         // and the associated textual format.
+    //         Class type = cfg.getDefault().getClass();
+    //         TextFormat format = TextFormat.getInstance(type);
+    //         if (!format.isParsingSupported()) {
+    //             LogContext.error("Cannot find suitable TextFormat to parse instances of " + type);
+    //             continue;
+    //         }
+    //         Object newValue = format.parse(Configurable.toCsq(textValue));
+    //         Configurable.configure(cfg, newValue);
+    //     }
+    // }
 
     /**
      * Convenience method to read configurable values from the specified 
