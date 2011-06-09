@@ -518,7 +518,6 @@ public abstract class Reflection {
             return null;
         }
 
-        @Override
         public Object getField(Class forClass, Class type, boolean inherited) {
             ClassInitializer.initialize(forClass);
             return getField2(forClass, type, inherited);
@@ -546,7 +545,6 @@ public abstract class Reflection {
             return (parentClass != null) ? getField2(parentClass, type, inherited) : null;
         }
 
-        @Override
         public void setField(Object obj, Class forClass, Class type) {
             synchronized (forClass) { // We don't want to attach simultaneously to the same class.
                 FastMap typeToField = (FastMap) _fields.get(forClass);
