@@ -13,7 +13,7 @@ import _templates.javolution.text.CharArray;
 /**
  * <p> This interface represents a list of XML attributes.</p>
  * 
- * <p> It is a more efficient version of <code>org.xml.sax.Attributes</code>
+ * <p> It is a more efficient version of <code>org.xml.sax3.Attributes</code>
  *     with  {@link CharArray CharArray}/{@link CharSequence CharSequence} 
  *     instead of the <code>String</code> to avoid forcing dynamic object 
  *     allocations.</p>

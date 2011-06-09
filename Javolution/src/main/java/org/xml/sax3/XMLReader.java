@@ -3,18 +3,18 @@
 // Written by David Megginson
 // NO WARRANTY!  This class is in the Public Domain.
 
-package org.xml.sax;
+package org.xml.sax3;
 
 import java.io.IOException;
 
-import org.xml.sax.ContentHandler;
-import org.xml.sax.DTDHandler;
-import org.xml.sax.EntityResolver;
-import org.xml.sax.ErrorHandler;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXNotRecognizedException;
-import org.xml.sax.SAXNotSupportedException;
+import org.xml.sax3.ContentHandler;
+import org.xml.sax3.DTDHandler;
+import org.xml.sax3.EntityResolver;
+import org.xml.sax3.ErrorHandler;
+import org.xml.sax3.InputSource;
+import org.xml.sax3.SAXException;
+import org.xml.sax3.SAXNotRecognizedException;
+import org.xml.sax3.SAXNotSupportedException;
 
 
 /**
@@ -44,7 +44,7 @@ import org.xml.sax.SAXNotSupportedException;
  * to return before reporting the next event.</p>
  *
  * <p>This interface replaces the (now deprecated) SAX 1.0 {@link
- * org.xml.sax.Parser Parser} interface.  The XMLReader interface
+ * org.xml.sax3.Parser Parser} interface.  The XMLReader interface
  * contains two important enhancements over the old Parser
  * interface (as well as some minor ones):</p>
  *
@@ -61,7 +61,7 @@ import org.xml.sax.SAXNotSupportedException;
  * @since SAX 2.0
  * @author David Megginson
  * @version 2.0.1+ (sax2r3pre1)
- * @see org.xml.sax.XMLFilter
+ * @see org.xml.sax3.XMLFilter
  */
 public interface XMLReader
 {
@@ -80,7 +80,7 @@ public interface XMLReader
      * Some feature values may be available only in specific
      * contexts, such as before, during, or after a parse.
      * Also, some feature values may not be programmatically accessible.
-     * (In the case of an adapter for SAX1 {@link org.xml.sax.Parser}, there 
+     * (In the case of an adapter for SAX1 {@link org.xml.sax3.Parser}, there 
      * is no implementation-independent way to expose whether the underlying
      * parser is performing validation, expanding external entities,
      * and so forth.) </p>
@@ -120,9 +120,9 @@ public interface XMLReader
      *
      * @param name The feature name, which is a fully-qualified URI.
      * @return The current value of the feature (true or false).
-     * @exception org.xml.sax.SAXNotRecognizedException If the feature
+     * @exception org.xml.sax3.SAXNotRecognizedException If the feature
      *            value can't be assigned or retrieved.
-     * @exception org.xml.sax.SAXNotSupportedException When the
+     * @exception org.xml.sax3.SAXNotSupportedException When the
      *            XMLReader recognizes the feature name but 
      *            cannot determine its value at this time.
      * @see #setFeature
@@ -147,9 +147,9 @@ public interface XMLReader
      *
      * @param name The feature name, which is a fully-qualified URI.
      * @param value The requested value of the feature (true or false).
-     * @exception org.xml.sax.SAXNotRecognizedException If the feature
+     * @exception org.xml.sax3.SAXNotRecognizedException If the feature
      *            value can't be assigned or retrieved.
-     * @exception org.xml.sax.SAXNotSupportedException When the
+     * @exception org.xml.sax3.SAXNotSupportedException When the
      *            XMLReader recognizes the feature name but 
      *            cannot set the requested value.
      * @see #getFeature
@@ -176,9 +176,9 @@ public interface XMLReader
      *
      * @param name The property name, which is a fully-qualified URI.
      * @return The current value of the property.
-     * @exception org.xml.sax.SAXNotRecognizedException If the property
+     * @exception org.xml.sax3.SAXNotRecognizedException If the property
      *            value can't be assigned or retrieved.
-     * @exception org.xml.sax.SAXNotSupportedException When the
+     * @exception org.xml.sax3.SAXNotSupportedException When the
      *            XMLReader recognizes the property name but 
      *            cannot determine its value at this time.
      * @see #setProperty
@@ -206,9 +206,9 @@ public interface XMLReader
      *
      * @param name The property name, which is a fully-qualified URI.
      * @param value The requested value for the property.
-     * @exception org.xml.sax.SAXNotRecognizedException If the property
+     * @exception org.xml.sax3.SAXNotRecognizedException If the property
      *            value can't be assigned or retrieved.
-     * @exception org.xml.sax.SAXNotSupportedException When the
+     * @exception org.xml.sax3.SAXNotSupportedException When the
      *            XMLReader recognizes the property name but 
      *            cannot set the requested value.
      */
@@ -366,9 +366,9 @@ public interface XMLReader
      * @param input The input source for the top-level of the
      *        XML document.
      * @throws IOException
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception org.xml.sax3.SAXException Any SAX exception, possibly
      *            wrapping another exception.
-     * @see org.xml.sax.InputSource
+     * @see org.xml.sax3.InputSource
      * @see #setEntityResolver
      * @see #setDTDHandler
      * @see #setContentHandler
@@ -394,9 +394,9 @@ public interface XMLReader
      *
      * @param systemId The system identifier (URI).
      * @throws IOException
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception org.xml.sax3.SAXException Any SAX exception, possibly
      *            wrapping another exception.
-     * @see #parse(org.xml.sax.InputSource)
+     * @see #parse(org.xml.sax3.InputSource)
      */
     public void parse (String systemId)
 	throws IOException, SAXException;

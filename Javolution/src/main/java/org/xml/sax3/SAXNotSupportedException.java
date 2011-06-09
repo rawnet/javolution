@@ -3,9 +3,9 @@
 // Written by David Megginson
 // NO WARRANTY!  This class is in the Public Domain.
 
-package org.xml.sax;
+package org.xml.sax3;
 
-import org.xml.sax.SAXException;
+import org.xml.sax3.SAXException;
 
 /**
  * Exception class for an unsupported operation.
@@ -25,7 +25,7 @@ import org.xml.sax.SAXException;
  * @since SAX 2.0
  * @author David Megginson
  * @version 2.0.1 (sax2r2)
- * @see org.xml.sax.SAXNotRecognizedException 
+ * @see org.xml.sax3.SAXNotRecognizedException 
  */
 public class SAXNotSupportedException extends SAXException
 {

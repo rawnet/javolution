@@ -2,12 +2,12 @@
 // http://www.saxproject.org
 // No warranty; no copyright -- use this as you will.
 
-package org.xml.sax;
+package org.xml.sax3;
 
 import java.io.IOException;
 
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
+import org.xml.sax3.InputSource;
+import org.xml.sax3.SAXException;
 
 
 /**
@@ -23,7 +23,7 @@ import org.xml.sax.SAXException;
  * <p>If a SAX application needs to implement customized handling
  * for external entities, it must implement this interface and
  * register an instance with the SAX driver using the
- * {@link org.xml.sax.XMLReader#setEntityResolver setEntityResolver}
+ * {@link org.xml.sax3.XMLReader#setEntityResolver setEntityResolver}
  * method.</p>
  *
  * <p>The XML reader will then allow the application to intercept any
@@ -40,8 +40,8 @@ import org.xml.sax.SAXException;
  * identifier "http://www.myhost.com/today":</p>
  *
  * <pre>
- * import org.xml.sax.EntityResolver;
- * import org.xml.sax.InputSource;
+ * import org.xml.sax3.EntityResolver;
+ * import org.xml.sax3.InputSource;
  *
  * public class MyResolver implements EntityResolver {
  *   public InputSource resolveEntity (String publicId, String systemId)
@@ -65,8 +65,8 @@ import org.xml.sax.SAXException;
  * @since SAX 1.0
  * @author David Megginson
  * @version 2.0.1 (sax2r2)
- * @see org.xml.sax.XMLReader#setEntityResolver
- * @see org.xml.sax.InputSource
+ * @see org.xml.sax3.XMLReader#setEntityResolver
+ * @see org.xml.sax3.InputSource
  */
 public interface EntityResolver {
     
@@ -105,10 +105,10 @@ public interface EntityResolver {
      * @return An InputSource object describing the new input source,
      *         or null to request that the parser open a regular
      *         URI connection to the system identifier.
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception org.xml.sax3.SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @throws IOException
-     * @see org.xml.sax.InputSource
+     * @see org.xml.sax3.InputSource
      */
     public abstract InputSource resolveEntity (String publicId,
 					       String systemId)

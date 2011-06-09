@@ -140,7 +140,7 @@ Currently defined standard feature URIs have the prefix
 	<td> Returns "true" if the <em>Attributes</em> objects passed by
 	    this parser in <em>ContentHandler.startElement()</em>
 	    implement the <a href="ext/Attributes2.html"
-	    ><em>org.xml.sax.ext.Attributes2</em></a> interface.
+	    ><em>org.xml.sax3.ext.Attributes2</em></a> interface.
 	    That interface exposes additional DTD-related information,
 	    such as whether the attribute was specified in the
 	    source text rather than defaulted.
@@ -154,7 +154,7 @@ Currently defined standard feature URIs have the prefix
 	<td> Returns "true" if the <em>Locator</em> objects passed by
 	    this parser in <em>ContentHandler.setDocumentLocator()</em>
 	    implement the <a href="ext/Locator2.html"
-	    ><em>org.xml.sax.ext.Locator2</em></a> interface.
+	    ><em>org.xml.sax3.ext.Locator2</em></a> interface.
 	    That interface exposes additional entity information,
 	    such as the character encoding and XML version used.
 		</td>
@@ -166,7 +166,7 @@ Currently defined standard feature URIs have the prefix
 	<td><em>true</em></td>
 	<td> Returns "true" if, when <em>setEntityResolver</em> is given
 	    an object implementing the <a href="ext/EntityResolver2.html"
-	    ><em>org.xml.sax.ext.EntityResolver2</em></a> interface,
+	    ><em>org.xml.sax3.ext.EntityResolver2</em></a> interface,
 	    those new methods will be used.
 	    Returns "false" to indicate that those methods will not be used.
 		</td>
@@ -245,7 +245,7 @@ the standard property URIs have the prefix
 	    as lexical ("document element name is ...") or which are
 	    mandatory for all SAX parsers (<em>DTDHandler</em>).
 	    The Object must implement <a href="ext/DeclHandler.html"
-	    ><em>org.xml.sax.ext.DeclHandler</em></a>.
+	    ><em>org.xml.sax3.ext.DeclHandler</em></a>.
 	    </td>
 	</tr>
 
@@ -275,7 +275,7 @@ the standard property URIs have the prefix
 	    entity inclusions, and the start and end of the DTD
 	    (and declaration of document element name).
 	    The Object must implement <a href="ext/LexicalHandler.html"
-	    ><em>org.xml.sax.ext.LexicalHandler</em></a>.
+	    ><em>org.xml.sax3.ext.LexicalHandler</em></a>.
 	    </td>
 	</tr>
 

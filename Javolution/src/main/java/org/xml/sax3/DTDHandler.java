@@ -2,9 +2,9 @@
 // http://www.saxproject.org
 // No warranty; no copyright -- use this as you will.
 
-package org.xml.sax;
+package org.xml.sax3;
 
-import org.xml.sax.SAXException;
+import org.xml.sax3.SAXException;
 
 /**
  * Receive notification of basic DTD-related events.
@@ -72,10 +72,10 @@ public interface DTDHandler {
      *        none was given.
      * @param systemId The notation's system identifier, or null if
      *        none was given.
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception org.xml.sax3.SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @see #unparsedEntityDecl
-     * @see org.xml.sax.Attributes
+     * @see org.xml.sax3.Attributes
      */
     public abstract void notationDecl (String name,
 				       String publicId,
@@ -96,7 +96,7 @@ public interface DTDHandler {
      * <p>If the system identifier is a URL, the parser must resolve it
      * fully before passing it to the application.</p>
      *
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception org.xml.sax3.SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @param name The unparsed entity's name.
      * @param publicId The entity's public identifier, or null if none
@@ -104,7 +104,7 @@ public interface DTDHandler {
      * @param systemId The entity's system identifier.
      * @param notationName The name of the associated notation.
      * @see #notationDecl
-     * @see org.xml.sax.Attributes
+     * @see org.xml.sax3.Attributes
      */
     public abstract void unparsedEntityDecl (String name,
 					     String publicId,

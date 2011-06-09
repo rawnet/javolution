@@ -3,11 +3,11 @@
 // Written by David Megginson
 // NO WARRANTY!  This class is in the public domain.
 
-package org.xml.sax;
+package org.xml.sax3;
 
-import org.xml.sax.Attributes;
-import org.xml.sax.Locator;
-import org.xml.sax.SAXException;
+import org.xml.sax3.Attributes;
+import org.xml.sax3.Locator;
+import org.xml.sax3.SAXException;
 
 
 /**
@@ -23,7 +23,7 @@ import org.xml.sax.SAXException;
  * <p>This is the main interface that most SAX applications
  * implement: if the application needs to be informed of basic parsing 
  * events, it implements this interface and registers an instance with 
- * the SAX parser using the {@link org.xml.sax.XMLReader#setContentHandler 
+ * the SAX parser using the {@link org.xml.sax3.XMLReader#setContentHandler 
  * setContentHandler} method.  The parser uses the instance to report 
  * basic document-related events like the start and end of elements 
  * and character data.</p>
@@ -44,7 +44,7 @@ import org.xml.sax.SAXException;
  * package; that means that it's probably a bad idea to do</p>
  *
  * <pre>import java.net.*;
- * import org.xml.sax.*;
+ * import org.xml.sax3.*;
  * </pre>
  *
  * <p>In fact, "import ...*" is usually a sign of sloppy programming
@@ -54,9 +54,9 @@ import org.xml.sax.SAXException;
  * @since SAX 2.0
  * @author David Megginson
  * @version 2.0.1+ (sax2r3pre1)
- * @see org.xml.sax.XMLReader
- * @see org.xml.sax.DTDHandler
- * @see org.xml.sax.ErrorHandler
+ * @see org.xml.sax3.XMLReader
+ * @see org.xml.sax3.DTDHandler
+ * @see org.xml.sax3.ErrorHandler
  */
 public interface ContentHandler
 {
@@ -86,7 +86,7 @@ public interface ContentHandler
      *
      * @param locator an object that can return the location of
      *                any SAX document event
-     * @see org.xml.sax.Locator
+     * @see org.xml.sax3.Locator
      */
     public void setDocumentLocator (Locator locator);
 
@@ -98,7 +98,7 @@ public interface ContentHandler
      * other event callbacks (except for {@link #setDocumentLocator 
      * setDocumentLocator}).</p>
      *
-     * @throws org.xml.sax.SAXException any SAX exception, possibly
+     * @throws org.xml.sax3.SAXException any SAX exception, possibly
      *            wrapping another exception
      * @see #endDocument
      */
@@ -111,7 +111,7 @@ public interface ContentHandler
      *
      * <p><strong>There is an apparent contradiction between the
      * documentation for this method and the documentation for {@link
-     * org.xml.sax.ErrorHandler#fatalError}.  Until this ambiguity is
+     * org.xml.sax3.ErrorHandler#fatalError}.  Until this ambiguity is
      * resolved in a future major release, clients should make no
      * assumptions about whether endDocument() will or will not be
      * invoked when the parser has reported a fatalError() or thrown
@@ -123,7 +123,7 @@ public interface ContentHandler
      * (because of an unrecoverable error) or reached the end of
      * input.</p>
      *
-     * @throws org.xml.sax.SAXException any SAX exception, possibly
+     * @throws org.xml.sax3.SAXException any SAX exception, possibly
      *            wrapping another exception
      * @see #startDocument
      */
@@ -164,7 +164,7 @@ public interface ContentHandler
      *	An empty string is used for the default element namespace,
      *	which has no prefix.
      * @param uri the Namespace URI the prefix is mapped to
-     * @throws org.xml.sax.SAXException the client may throw
+     * @throws org.xml.sax3.SAXException the client may throw
      *            an exception during processing
      * @see #endPrefixMapping
      * @see #startElement
@@ -184,7 +184,7 @@ public interface ContentHandler
      *
      * @param prefix the prefix that was being mapped.
      *	This is the empty string when a default mapping scope ends.
-     * @throws org.xml.sax.SAXException the client may throw
+     * @throws org.xml.sax3.SAXException the client may throw
      *            an exception during processing
      * @see #startPrefixMapping
      * @see #endElement
@@ -251,10 +251,10 @@ public interface ContentHandler
      *        there are no attributes, it shall be an empty
      *        Attributes object.  The value of this object after
      *        startElement returns is undefined
-     * @throws org.xml.sax.SAXException any SAX exception, possibly
+     * @throws org.xml.sax3.SAXException any SAX exception, possibly
      *            wrapping another exception
      * @see #endElement
-     * @see org.xml.sax.Attributes
+     * @see org.xml.sax3.Attributes
      */
     public void startElement (String uri, String localName,
 			      String qName, Attributes atts)
@@ -279,7 +279,7 @@ public interface ContentHandler
      *        performed
      * @param qName the qualified XML name (with prefix), or the
      *        empty string if qualified names are not available
-     * @throws org.xml.sax.SAXException any SAX exception, possibly
+     * @throws org.xml.sax3.SAXException any SAX exception, possibly
      *            wrapping another exception
      */
     public void endElement (String uri, String localName,
@@ -325,10 +325,10 @@ public interface ContentHandler
      * @param ch the characters from the XML document
      * @param start the start position in the array
      * @param length the number of characters to read from the array
-     * @throws org.xml.sax.SAXException any SAX exception, possibly
+     * @throws org.xml.sax3.SAXException any SAX exception, possibly
      *            wrapping another exception
      * @see #ignorableWhitespace 
-     * @see org.xml.sax.Locator
+     * @see org.xml.sax3.Locator
      */
     public void characters (char ch[], int start, int length)
 	throws SAXException;
@@ -355,7 +355,7 @@ public interface ContentHandler
      * @param ch the characters from the XML document
      * @param start the start position in the array
      * @param length the number of characters to read from the array
-     * @throws org.xml.sax.SAXException any SAX exception, possibly
+     * @throws org.xml.sax3.SAXException any SAX exception, possibly
      *            wrapping another exception
      * @see #characters
      */
@@ -382,7 +382,7 @@ public interface ContentHandler
      * @param data the processing instruction data, or null if
      *        none was supplied.  The data does not include any
      *        whitespace separating it from the target
-     * @throws org.xml.sax.SAXException any SAX exception, possibly
+     * @throws org.xml.sax3.SAXException any SAX exception, possibly
      *            wrapping another exception
      */
     public void processingInstruction (String target, String data)
@@ -411,7 +411,7 @@ public interface ContentHandler
      *        parameter entity, the name will begin with '%', and if
      *        it is the external DTD subset, it will be the string
      *        "[dtd]"
-     * @throws org.xml.sax.SAXException any SAX exception, possibly
+     * @throws org.xml.sax3.SAXException any SAX exception, possibly
      *            wrapping another exception
      */
     public void skippedEntity (String name)

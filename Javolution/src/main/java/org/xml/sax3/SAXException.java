@@ -2,7 +2,7 @@
 // http://www.saxproject.org
 // No warranty; no copyright -- use this as you will.
 
-package org.xml.sax;
+package org.xml.sax3;
 
 /**
  * Encapsulate a general SAX error or warning.
@@ -26,12 +26,12 @@ package org.xml.sax;
  *
  * <p>If the parser or application needs to include information about a
  * specific location in an XML document, it should use the
- * {@link org.xml.sax.SAXParseException SAXParseException} subclass.</p>
+ * {@link org.xml.sax3.SAXParseException SAXParseException} subclass.</p>
  *
  * @since SAX 1.0
  * @author David Megginson
  * @version 2.0.1 (sax2r2)
- * @see org.xml.sax.SAXParseException
+ * @see org.xml.sax3.SAXParseException
  */
 public class SAXException extends Exception {
 

@@ -3,9 +3,9 @@
 // Written by David Megginson
 // NO WARRANTY!  This class is in the Public Domain.
 
-package org.xml.sax;
+package org.xml.sax3;
 
-import org.xml.sax.XMLReader;
+import org.xml.sax3.XMLReader;
 
 
 /**
@@ -24,9 +24,9 @@ import org.xml.sax.XMLReader;
  * events as they pass on to the final application.</p>
  *
  * <p>The XMLFilterImpl helper class provides a convenient base
- * for creating SAX2 filters, by passing on all {@link org.xml.sax.EntityResolver
- * EntityResolver}, {@link org.xml.sax.DTDHandler DTDHandler},
- * {@link org.xml.sax.ContentHandler ContentHandler} and {@link org.xml.sax.ErrorHandler
+ * for creating SAX2 filters, by passing on all {@link org.xml.sax3.EntityResolver
+ * EntityResolver}, {@link org.xml.sax3.DTDHandler DTDHandler},
+ * {@link org.xml.sax3.ContentHandler ContentHandler} and {@link org.xml.sax3.ErrorHandler
  * ErrorHandler} events automatically.</p>
  *
  * @since SAX 2.0

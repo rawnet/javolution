@@ -2,7 +2,7 @@
 // http://www.saxproject.org
 // No warranty; no copyright -- use this as you will.
 
-package org.xml.sax;
+package org.xml.sax3;
 
 
 /**
@@ -18,7 +18,7 @@ package org.xml.sax;
  * <p>If a SAX parser provides location information to the SAX
  * application, it does so by implementing this interface and then
  * passing an instance to the application using the content
- * handler's {@link org.xml.sax.ContentHandler#setDocumentLocator
+ * handler's {@link org.xml.sax3.ContentHandler#setDocumentLocator
  * setDocumentLocator} method.  The application can use the
  * object to obtain the location of any other SAX event
  * in the XML source document.</p>
@@ -32,14 +32,14 @@ package org.xml.sax;
  * very strongly encouraged to do so.  If the parser supplies a
  * locator, it must do so before reporting any other document events.
  * If no locator has been set by the time the application receives
- * the {@link org.xml.sax.ContentHandler#startDocument startDocument}
+ * the {@link org.xml.sax3.ContentHandler#startDocument startDocument}
  * event, the application should assume that a locator is not 
  * available.</p>
  *
  * @since SAX 1.0
  * @author David Megginson
  * @version 2.0.1 (sax2r2)
- * @see org.xml.sax.ContentHandler#setDocumentLocator 
+ * @see org.xml.sax3.ContentHandler#setDocumentLocator 
  */
 public interface Locator {
     

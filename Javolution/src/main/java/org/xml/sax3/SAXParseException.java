@@ -2,10 +2,10 @@
 // http://www.saxproject.org
 // No warranty; no copyright -- use this as you will.
 
-package org.xml.sax;
+package org.xml.sax3;
 
-import org.xml.sax.Locator;
-import org.xml.sax.SAXException;
+import org.xml.sax3.Locator;
+import org.xml.sax3.SAXException;
 
 /**
  * Encapsulate an XML parse error or warning.
@@ -21,20 +21,20 @@ import org.xml.sax.SAXException;
  * in the original XML document, as if it came from a {@link Locator}
  * object.  Note that although the application
  * will receive a SAXParseException as the argument to the handlers
- * in the {@link org.xml.sax.ErrorHandler ErrorHandler} interface, 
+ * in the {@link org.xml.sax3.ErrorHandler ErrorHandler} interface, 
  * the application is not actually required to throw the exception; 
  * instead, it can simply read the information in it and take a 
  * different action.</p>
  *
- * <p>Since this exception is a subclass of {@link org.xml.sax.SAXException 
+ * <p>Since this exception is a subclass of {@link org.xml.sax3.SAXException 
  * SAXException}, it inherits the ability to wrap another exception.</p>
  *
  * @since SAX 1.0
  * @author David Megginson
  * @version 2.0.1 (sax2r2)
- * @see org.xml.sax.SAXException
- * @see org.xml.sax.Locator
- * @see org.xml.sax.ErrorHandler
+ * @see org.xml.sax3.SAXException
+ * @see org.xml.sax3.Locator
+ * @see org.xml.sax3.ErrorHandler
  */
 public class SAXParseException extends SAXException {
     
@@ -48,13 +48,13 @@ public class SAXParseException extends SAXException {
      * Create a new SAXParseException from a message and a Locator.
      *
      * <p>This constructor is especially useful when an application is
-     * creating its own exception from within a {@link org.xml.sax.ContentHandler
+     * creating its own exception from within a {@link org.xml.sax3.ContentHandler
      * ContentHandler} callback.</p>
      *
      * @param message The error or warning message.
      * @param locator The locator object for the error or warning (may be
      *        null).
-     * @see org.xml.sax.Locator
+     * @see org.xml.sax3.Locator
      */
     public SAXParseException (String message, Locator locator) {
 	super(message);
@@ -71,16 +71,16 @@ public class SAXParseException extends SAXException {
      * Wrap an existing exception in a SAXParseException.
      *
      * <p>This constructor is especially useful when an application is
-     * creating its own exception from within a {@link org.xml.sax.ContentHandler
+     * creating its own exception from within a {@link org.xml.sax3.ContentHandler
      * ContentHandler} callback, and needs to wrap an existing exception that is not a
-     * subclass of {@link org.xml.sax.SAXException SAXException}.</p>
+     * subclass of {@link org.xml.sax3.SAXException SAXException}.</p>
      *
      * @param message The error or warning message, or null to
      *                use the message from the embedded exception.
      * @param locator The locator object for the error or warning (may be
      *        null).
      * @param e Any exception.
-     * @see org.xml.sax.Locator
+     * @see org.xml.sax3.Locator
      */
     public SAXParseException (String message, Locator locator,
 			      Exception e) {
@@ -128,7 +128,7 @@ public class SAXParseException extends SAXException {
      *
      * <p>This constructor is most useful for parser writers who
      * need to wrap an exception that is not a subclass of
-     * {@link org.xml.sax.SAXException SAXException}.</p>
+     * {@link org.xml.sax3.SAXException SAXException}.</p>
      *
      * <p>All parameters except the message and exception are as if
      * they were provided by a {@link Locator}.  For example, if the
@@ -180,7 +180,7 @@ public class SAXParseException extends SAXException {
      *
      * @return A string containing the public identifier, or null
      *         if none is available.
-     * @see org.xml.sax.Locator#getPublicId
+     * @see org.xml.sax3.Locator#getPublicId
      */
     public String getPublicId ()
     {
@@ -196,7 +196,7 @@ public class SAXParseException extends SAXException {
      *
      * @return A string containing the system identifier, or null
      *         if none is available.
-     * @see org.xml.sax.Locator#getSystemId
+     * @see org.xml.sax3.Locator#getSystemId
      */
     public String getSystemId ()
     {
@@ -211,7 +211,7 @@ public class SAXParseException extends SAXException {
      *
      * @return An integer representing the line number, or -1
      *         if none is available.
-     * @see org.xml.sax.Locator#getLineNumber
+     * @see org.xml.sax3.Locator#getLineNumber
      */
     public int getLineNumber ()
     {
@@ -226,7 +226,7 @@ public class SAXParseException extends SAXException {
      *
      * @return An integer representing the column number, or -1
      *         if none is available.
-     * @see org.xml.sax.Locator#getColumnNumber
+     * @see org.xml.sax3.Locator#getColumnNumber
      */
     public int getColumnNumber ()
     {

@@ -2,17 +2,17 @@
 // http://www.saxproject.org
 // No warranty; no copyright -- use this as you will.
 
-package org.xml.sax;
+package org.xml.sax3;
 
 import java.io.IOException;
 
-import org.xml.sax.DTDHandler;
-import org.xml.sax.DocumentHandler;
-import org.xml.sax.EntityResolver;
-import org.xml.sax.ErrorHandler;
-import org.xml.sax.HandlerBase;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
+import org.xml.sax3.DTDHandler;
+import org.xml.sax3.DocumentHandler;
+import org.xml.sax3.EntityResolver;
+import org.xml.sax3.ErrorHandler;
+import org.xml.sax3.HandlerBase;
+import org.xml.sax3.InputSource;
+import org.xml.sax3.SAXException;
 
 
 /**
@@ -26,7 +26,7 @@ import org.xml.sax.SAXException;
  * </blockquote>
  *
  * <p>This was the main event supplier interface for SAX1; it has
- * been replaced in SAX2 by {@link org.xml.sax.XMLReader XMLReader},
+ * been replaced in SAX2 by {@link org.xml.sax3.XMLReader XMLReader},
  * which includes Namespace support and sophisticated configurability
  * and extensibility.</p>
  *
@@ -43,17 +43,17 @@ import org.xml.sax.SAXException;
  * invoke the parse() methods recursively within a parse.</p>
  *
  * @deprecated This interface has been replaced by the SAX2
- *             {@link org.xml.sax.XMLReader XMLReader}
+ *             {@link org.xml.sax3.XMLReader XMLReader}
  *             interface, which includes Namespace support.
  * @since SAX 1.0
  * @author David Megginson
  * @version 2.0.1 (sax2r2)
- * @see org.xml.sax.EntityResolver
- * @see org.xml.sax.DTDHandler
- * @see org.xml.sax.DocumentHandler
- * @see org.xml.sax.ErrorHandler
- * @see org.xml.sax.HandlerBase
- * @see org.xml.sax.InputSource
+ * @see org.xml.sax3.EntityResolver
+ * @see org.xml.sax3.DTDHandler
+ * @see org.xml.sax3.DocumentHandler
+ * @see org.xml.sax3.ErrorHandler
+ * @see org.xml.sax3.HandlerBase
+ * @see org.xml.sax3.InputSource
  */
 public interface Parser 
 {
@@ -150,10 +150,10 @@ public interface Parser
      *
      * @param source The input source for the top-level of the
      *        XML document.
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception org.xml.sax3.SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @throws IOException
-     * @see org.xml.sax.InputSource
+     * @see org.xml.sax3.InputSource
      * @see #setEntityResolver
      * @see #setDTDHandler
      * @see #setDocumentHandler
@@ -178,10 +178,10 @@ public interface Parser
      * by the application before it is passed to the parser.</p>
      *
      * @param systemId The system identifier (URI).
-     * @exception org.xml.sax.SAXException Any SAX exception, possibly
+     * @exception org.xml.sax3.SAXException Any SAX exception, possibly
      *            wrapping another exception.
      * @throws IOException 
-     * @see #parse(org.xml.sax.InputSource)
+     * @see #parse(org.xml.sax3.InputSource)
      */
     public abstract void parse (String systemId)
 	throws SAXException, IOException;

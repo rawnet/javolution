@@ -3,7 +3,7 @@
 // No warranty; no copyright -- use this as you will.
 // $Id: InputSource.java,v 1.9 2002/01/30 21:13:45 dbrownell Exp $
 
-package org.xml.sax;
+package org.xml.sax3;
 
 import java.io.Reader;
 import java.io.InputStream;
@@ -52,8 +52,8 @@ import java.io.InputStream;
  * @since SAX 1.0
  * @author David Megginson
  * @version 2.0.1 (sax2r2)
- * @see org.xml.sax.XMLReader#parse(org.xml.sax.InputSource)
- * @see org.xml.sax.EntityResolver#resolveEntity
+ * @see org.xml.sax3.XMLReader#parse(org.xml.sax3.InputSource)
+ * @see org.xml.sax3.EntityResolver#resolveEntity
  */
 public class InputSource {
     
@@ -145,8 +145,8 @@ public class InputSource {
      *
      * @param publicId The public identifier as a string.
      * @see #getPublicId
-     * @see org.xml.sax.Locator#getPublicId
-     * @see org.xml.sax.SAXParseException#getPublicId
+     * @see org.xml.sax3.Locator#getPublicId
+     * @see org.xml.sax3.SAXParseException#getPublicId
      */
     public void setPublicId (String publicId)
     {
@@ -186,8 +186,8 @@ public class InputSource {
      * @param systemId The system identifier as a string.
      * @see #setEncoding
      * @see #getSystemId
-     * @see org.xml.sax.Locator#getSystemId
-     * @see org.xml.sax.SAXParseException#getSystemId
+     * @see org.xml.sax3.Locator#getSystemId
+     * @see org.xml.sax3.SAXParseException#getSystemId
      */
     public void setSystemId (String systemId)
     {

@@ -2,7 +2,7 @@
 // http://www.saxproject.org
 // No warranty; no copyright -- use this as you will.
 
-package org.xml.sax;
+package org.xml.sax3;
 
 /**
  * Interface for an element's attribute specifications.
@@ -15,11 +15,11 @@ package org.xml.sax;
  * </blockquote>
  *
  * <p>This is the original SAX1 interface for reporting an element's
- * attributes.  Unlike the new {@link org.xml.sax.Attributes Attributes}
+ * attributes.  Unlike the new {@link org.xml.sax3.Attributes Attributes}
  * interface, it does not support Namespace-related information.</p>
  *
  * <p>When an attribute list is supplied as part of a
- * {@link org.xml.sax.DocumentHandler#startElement startElement}
+ * {@link org.xml.sax3.DocumentHandler#startElement startElement}
  * event, the list will return valid results only during the
  * scope of the event; once the event handler returns control
  * to the parser, the attribute list is invalid.  To save a

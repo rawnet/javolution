@@ -3,7 +3,7 @@
 // Written by David Megginson
 // NO WARRANTY!  This class is in the public domain.
 
-package org.xml.sax;
+package org.xml.sax3;
 
 
 /**
@@ -52,7 +52,7 @@ package org.xml.sax;
  * available.</p>
  *
  * <p>This interface replaces the now-deprecated SAX1 {@link
- * org.xml.sax.AttributeList AttributeList} interface, which does not 
+ * org.xml.sax3.AttributeList AttributeList} interface, which does not 
  * contain Namespace support.  In addition to Namespace support, it 
  * adds the <var>getIndex</var> methods (below).</p>
  *
